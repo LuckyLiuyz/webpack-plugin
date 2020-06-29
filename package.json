@@ -8,8 +8,8 @@
 		"build-clean": "webpack --config ./src/clean-webpack-plugin/webpack.config.js",
 		"build-copy": "webpack --config ./src/copy-webpack-plugin/webpack.config.js",
 		"build-html": "webpack --config ./src/html-webpack-plugin/webpack.config.js",
-		"build-my": "webpack --config ./src/src/my-webpack-plugin/webpack.config.js",
-		"build-ideal": "webpack --config ./src/src/ideal-develop-env/webpack.config.js"
+		"build-my": "webpack --config ./src/my-webpack-plugin/webpack.config.js",
+		"build-ideal": "webpack --config ./src/ideal-develop-env/webpack.config.js"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.6.3",

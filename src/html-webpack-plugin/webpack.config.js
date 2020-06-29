@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'none',
-  entry: './src/main.js',
+  entry: './src/html-webpack-plugin/src/main.js',
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, 'dist'),
@@ -38,7 +38,7 @@ module.exports = {
       meta: {
         viewport: 'width=device-width'
       },
-      template: './src/index.html'
+      template: './src/html-webpack-plugin/src/index.html'
     }),
     // 用于生成 about.html
     new HtmlWebpackPlugin({
