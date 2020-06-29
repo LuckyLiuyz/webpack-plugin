@@ -15,7 +15,7 @@
 
 ### 1、自定义 plugin
 
-#### 通过自定义 plugin 实现将 webpack 编译打包生成的 js 文件中的大量 /**\***/ 注释去除。
+#### 通过自定义 plugin 实现将 webpack 编译打包生成的 js 文件中的大量 /\*\*\*\*/ 注释去除。
 
 ![blockchain]("自定义plugin配置信息")
 ![blockchain]("自定义plugin实现代码")
