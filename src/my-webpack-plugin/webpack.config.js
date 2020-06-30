@@ -47,7 +47,8 @@ module.exports = {
         use: {
           loader: 'url-loader',
           options: {
-            limit: 10 * 1024 // 10 KB
+            limit: 10 * 1024, // 10 KB
+            name: '[name].[hash:4].[ext]', // 设置处理后的文件名称格式
           }
         }
       }

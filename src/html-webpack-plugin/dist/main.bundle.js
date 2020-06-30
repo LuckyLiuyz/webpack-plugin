@@ -99,14 +99,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const heading = Object(_heading_js__WEBPACK_IMPORTED_MODULE_0__["default"])()
+window.onload = () => {
+    const heading = Object(_heading_js__WEBPACK_IMPORTED_MODULE_0__["default"])()
 
-document.body.append(heading)
+    document.body.append(heading)
 
-const img = new Image()
-img.src = _icon_png__WEBPACK_IMPORTED_MODULE_2___default.a
+    const img = new Image()
+    img.src = _icon_png__WEBPACK_IMPORTED_MODULE_2___default.a
 
-document.body.append(img)
+    document.body.append(img)
+}
+
 
 
 /***/ }),
@@ -585,7 +588,7 @@ module.exports = exports;
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "aaa0e8af948e470ee7dd81a36b503e18.png";
+module.exports = __webpack_require__.p + "icon.aaa0.png";
 
 /***/ })
 /******/ ]);

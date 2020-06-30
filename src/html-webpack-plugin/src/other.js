@@ -1,0 +1,1 @@
+console.log('我是other.js,我主要是为了验证，多入口打包情况下，HtmlWebpackPlugin的chunks配置的作用')
