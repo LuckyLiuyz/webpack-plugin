@@ -585,7 +585,7 @@ module.exports = exports;
 /* 8 */
  (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "aaa0e8af948e470ee7dd81a36b503e18.png";
+module.exports = __webpack_require__.p + "icon.aaa0.png";
 
  })
  ]);

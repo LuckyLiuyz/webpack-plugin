@@ -1,33 +1,11 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-
-class MyPlugin {
-  apply (compiler) {
-    console.log('MyPlugin 启动')
-
-    compiler.hooks.emit.tap('MyPlugin', compilation => {
-      // compilation => 可以理解为此次打包的上下文
-      for (const name in compilation.assets) {
-        // console.log(name)
-        // console.log(compilation.assets[name].source())
-        if (name.endsWith('.js')) {
-          const contents = compilation.assets[name].source()
-          const withoutComments = contents.replace(/\/\*\*+\*\//g, '')
-          compilation.assets[name] = {
-            source: () => withoutComments,
-            size: () => withoutComments.length
-          }
-        }
-      }
-    })
-  }
-}
+const MyPlugin = require('./src/myPlugin');
 
 module.exports = {
   mode: 'none',
-  entry: './src/my-webpack-plugin/src/main.js',
+  entry: __dirname + '/src/main.js',
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, 'dist'),
@@ -62,16 +40,12 @@ module.exports = {
       meta: {
         viewport: 'width=device-width'
       },
-      template: './src/my-webpack-plugin/src/index.html'
+      template: __dirname + '/src/index.html'
     }),
-    // 用于生成 about.html
-    new HtmlWebpackPlugin({
-      filename: 'about.html'
-    }),
-    new CopyWebpackPlugin([
-      // 'public/**'
-      'public'
-    ]),
-    new MyPlugin()
+
+    /**
+     * 自定义的plugin
+     */
+    new MyPlugin(),
   ]
 }
