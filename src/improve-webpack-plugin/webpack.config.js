@@ -1,13 +1,13 @@
 /**
  * @file 如何优化改进 Webpack 的构建速度和打包结果？
- * 1、不同环境下不同配置；开发环境使用 webpack.config.dev.js ; 生产环境使用 webpack.config.prod.js.
- * 2、
+ * 1、不同环境下不同配置；开发环境使用 webpack.config.dev.js ; 生产环境使用 webpack.config.prod.js;
+ * 2、生产模式下的优化插件: Define Plugin 、Mini CSS Extract Plugin 、Optimize CSS Assets Webpack Plugin 、TerserWebpackPlugin等；
+ * 3、合理配置mode, devtool的值；
  */
 const merge = require('webpack-merge');
-
-const commonConfig = require('./config/webpack.config.common');
 const devConfig = require('./config/webpack.config.dev');
 const prodConfig = require('./config/webpack.config.prod');
+const commonConfig = require('./config/webpack.config.common');
 
 
 /**
@@ -21,6 +21,10 @@ const prodConfig = require('./config/webpack.config.prod');
  * 所以我们需要更合适的方法来合并这里的配置与公共的配置。webpack-merge应运而生，它专门用来满足我们这里合并 Webpack 配置的需求。
  */
 module.exports = (env, argv) => {
+  console.log({
+    env,
+    argv,
+  });
   if (env === 'dev') {
     return merge(commonConfig, devConfig);
   } else {

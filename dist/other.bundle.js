@@ -81,15 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/improve-webpack-plugin/src/other.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 9:
+/***/ "./src/improve-webpack-plugin/src/other.js":
+/*!*************************************************!*\
+  !*** ./src/improve-webpack-plugin/src/other.js ***!
+  \*************************************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-console.log('我是other.js,我主要是为了验证，多入口打包情况下，HtmlWebpackPlugin的chunks配置的作用')
+eval("console.log('我是other.js,我主要是为了验证，多入口打包情况下，HtmlWebpackPlugin的chunks配置的作用')//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvaW1wcm92ZS13ZWJwYWNrLXBsdWdpbi9zcmMvb3RoZXIuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaW1wcm92ZS13ZWJwYWNrLXBsdWdpbi9zcmMvb3RoZXIuanM/NmIyNCJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zb2xlLmxvZygn5oiR5pivb3RoZXIuanMs5oiR5Li76KaB5piv5Li65LqG6aqM6K+B77yM5aSa5YWl5Y+j5omT5YyF5oOF5Ya15LiL77yMSHRtbFdlYnBhY2tQbHVnaW7nmoRjaHVua3PphY3nva7nmoTkvZznlKgnKSJdLCJtYXBwaW5ncyI6IkFBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/improve-webpack-plugin/src/other.js\n");
 
 /***/ })
 
