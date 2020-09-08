@@ -99,6 +99,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/**
+ * 如果不使用window.onload， HtmlWebpackPlugin的inject:head时会报错。因为打包生成的js被放到head标签中，此时执行下述语句时body还没有生成！
+ */
 window.onload = () => {
     const heading = Object(_heading_js__WEBPACK_IMPORTED_MODULE_0__["default"])()
 
